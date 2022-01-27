@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
   faBars,
   faCode,
@@ -348,14 +349,19 @@ export default function Home() {
               } border-2  p-2 duration-1000 cursor-pointer `}
             >
               <h3>Griffin EnerG Consulting</h3>
-              <Image
+              <img
+                className="hover:scale-105 duration-1000"
+                src="/griffin-energ-consulting.png"
+                alt="Griffin EnerG Consulting"
+              />
+              {/* <Image
                 className="hover:scale-105 duration-1000"
                 src={"/griffin-energ-consulting.png"}
                 width={1893}
                 height={863}
                 layout="intrinsic"
                 alt="Griffin EnerG Consulting"
-              />
+              /> */}
             </div>
             <div
               className={`${
