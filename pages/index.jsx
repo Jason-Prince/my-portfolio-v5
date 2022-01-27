@@ -33,9 +33,13 @@ export default function Home() {
       <div
         className={`${
           isDark ? "bg-dark text-light" : "bg-light text-dark"
-        } font-Poppins h-min duration-1000 grid place-items-center px-4`}
+        } font-Poppins h-min duration-1000 grid place-items-center px-4 `}
       >
-        <div className="grid grid-cols-12 pt-5 px-5 z-50 sticky top-0">
+        <div
+          className={`${
+            isDark ? "bg-dark" : "bg-light"
+          } grid grid-cols-12 pt-5 px-5 z-50 sticky top-0 duration-1000`}
+        >
           {/* logo */}
           <div className="col-start-1 w-[100px] text-lg grid grid-cols-12 items-center">
             <FontAwesomeIcon className="" icon={faTerminal} />
@@ -110,9 +114,7 @@ export default function Home() {
             <p className="place-self-start">Contact Me</p>
           </li>
         </ul>
-        <div
-          className={`flex flex-col justify-evenly h-screen w-full place-items-center place-content-center duration-1000`}
-        >
+        <div className={`grid grid-cols-1 gap-8 py-8 duration-1000`}>
           <svg className="w-[380px]" viewBox="0 0 1139.17088 654.54324">
             <title>progressive_app</title>
             <circle cx="246.82682" cy="521.76476" r="59.24334" fill="#f2f2f2" />
@@ -330,15 +332,78 @@ export default function Home() {
             Hi, I&#39;m Jason Prince. <br />A Front-End Developer based in Utah.
             Available for freelance & collaborations.
           </h1>
-          <section id="projects" className="text-2xl grid grid-cols-12 ">
-            <h2 className="col-start-1 ">Projects</h2>
+          {/* projects */}
+        </div>
+        <section id="projects" className="text-2xl grid grid-cols-12 gap-4">
+          <h2 className="col-start-1 ">Projects</h2>
+          <div
+            className={`${
+              isDark ? "border-light" : "border-dark"
+            } col-start-1 col-span-12 border-b-2 duration-1000`}
+          ></div>
+          <div className="col-span-full grid grid-cols-1 w-full gap-4">
             <div
               className={`${
                 isDark ? "border-light" : "border-dark"
-              } col-start-1 col-span-12 pt-3 border-b-2 duration-1000`}
-            ></div>
-          </section>
-        </div>
+              } border-2  p-2 duration-1000 cursor-pointer `}
+            >
+              <h3>Griffin EnerG Consulting</h3>
+              <Image
+                className="hover:scale-105 duration-1000"
+                src="/griffin-energ-consulting.png"
+                width={1893}
+                height={863}
+                layout="intrinsic"
+                alt="Griffin EnerG Consulting"
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-2  p-2 duration-1000 cursor-pointer `}
+            >
+              <h3>Latitude Study</h3>
+              <Image
+                className="hover:scale-105 duration-1000"
+                src="/latitude-study.png"
+                width={1911}
+                height={882}
+                layout="intrinsic"
+                alt="Latitude Study"
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-2  p-2 duration-1000 cursor-pointer`}
+            >
+              <h3>Cooking With React</h3>
+              <Image
+                className="hover:scale-105 duration-1000"
+                src="/cooking-with-react.png"
+                width={1246}
+                height={916}
+                layout="intrinsic"
+                alt="Cooking With React"
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-2  p-2 duration-1000 cursor-pointer`}
+            >
+              <h3>Pixabay Image Search</h3>
+              <Image
+                className="hover:scale-105 duration-1000"
+                src="/pixabay-image-search.png"
+                width={1540}
+                height={1120}
+                layout="intrinsic"
+                alt="Pixabay Image Search"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
