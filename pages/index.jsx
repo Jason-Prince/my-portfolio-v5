@@ -350,7 +350,7 @@ export default function Home() {
               <h3>Griffin EnerG Consulting</h3>
               <Image
                 className="hover:scale-105 duration-1000"
-                src="/griffin-energ-consulting.png"
+                src={"/griffin-energ-consulting.png"}
                 width={1893}
                 height={863}
                 layout="intrinsic"
@@ -365,7 +365,7 @@ export default function Home() {
               <h3>Latitude Study</h3>
               <Image
                 className="hover:scale-105 duration-1000"
-                src="/latitude-study.png"
+                src={"/latitude-study.png"}
                 width={1911}
                 height={882}
                 layout="intrinsic"
@@ -380,7 +380,7 @@ export default function Home() {
               <h3>Cooking With React</h3>
               <Image
                 className="hover:scale-105 duration-1000"
-                src="/cooking-with-react.png"
+                src={"/cooking-with-react.png"}
                 width={1246}
                 height={916}
                 layout="intrinsic"
@@ -395,7 +395,7 @@ export default function Home() {
               <h3>Pixabay Image Search</h3>
               <Image
                 className="hover:scale-105 duration-1000"
-                src="/pixabay-image-search.png"
+                src={"/pixabay-image-search.png"}
                 width={1540}
                 height={1120}
                 layout="intrinsic"
