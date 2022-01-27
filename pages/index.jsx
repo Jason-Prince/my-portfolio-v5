@@ -35,7 +35,7 @@ export default function Home() {
           isDark ? "bg-dark text-light" : "bg-light text-dark"
         } font-Poppins h-min duration-1000 grid place-items-center px-4`}
       >
-        <div className="grid grid-cols-12 pt-5 px-5 ">
+        <div className="grid grid-cols-12 pt-5 px-5 z-50 sticky top-0">
           {/* logo */}
           <div className="col-start-1 w-[100px] text-lg grid grid-cols-12 items-center">
             <FontAwesomeIcon className="" icon={faTerminal} />
