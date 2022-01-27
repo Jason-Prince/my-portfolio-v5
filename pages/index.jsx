@@ -116,8 +116,13 @@ export default function Home() {
             <p className="place-self-start">Contact Me</p>
           </li>
         </ul>
-        <div className={`grid grid-cols-1 gap-8 py-8 duration-1000`}>
-          <svg className="w-[380px]" viewBox="0 0 1139.17088 654.54324">
+        <div
+          className={`grid grid-cols-1 gap-8 py-8 duration-1000 md:grid-cols-2`}
+        >
+          <svg
+            className="w-[380px] md:col-start-2"
+            viewBox="0 0 1139.17088 654.54324"
+          >
             <title>progressive_app</title>
             <circle cx="246.82682" cy="521.76476" r="59.24334" fill="#f2f2f2" />
             <circle cx="256.45989" cy="513.095" r="59.24334" fill="#f9f9f9" />
@@ -330,7 +335,7 @@ export default function Home() {
               fill="#3f3d56"
             />
           </svg>
-          <h1 className="text-2xl w-[380px] text-center">
+          <h1 className="text-2xl w-[380px] text-center md:text-left md:row-start-1 md:self-center">
             Hi, I&#39;m Jason Prince. <br />A Front-End Developer based in Utah.
             Available for freelance & collaborations.
           </h1>
@@ -406,7 +411,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="w-full border-b-2 border-dark my-2"></div>
+        <div
+          className={`${
+            isDark ? "border-light" : "border-dark"
+          } w-full border-b-2 my-2 duration-1000`}
+        ></div>
         <footer className="grid grid-cols-3 w-full">
           {/* logo */}
           <div className="grid grid-cols-2 w-12 items-center">
