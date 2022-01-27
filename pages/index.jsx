@@ -351,12 +351,12 @@ export default function Home() {
               <h3>Griffin EnerG Consulting</h3>
               <img
                 className="hover:scale-105 duration-1000"
-                src="/griffin-energ-consulting.png"
+                src="/griffin.png"
                 alt="Griffin EnerG Consulting"
               />
               {/* <Image
                 className="hover:scale-105 duration-1000"
-                src={"/griffin-energ-consulting.png"}
+                src={"/griffin.png"}
                 width={1893}
                 height={863}
                 layout="intrinsic"
