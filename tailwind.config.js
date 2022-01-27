@@ -10,6 +10,10 @@ module.exports = {
         RobotoMono: [`'Roboto Mono', monospace`],
         Poppins: [`"Poppins", sans-serif`],
       },
+      colors: {
+        light: "#f9f9f9",
+        dark: "#282828",
+      },
     },
   },
   plugins: [],
