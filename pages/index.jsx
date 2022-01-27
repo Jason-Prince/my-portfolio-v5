@@ -349,19 +349,19 @@ export default function Home() {
               } border-2  p-2 duration-1000 cursor-pointer `}
             >
               <h3>Griffin EnerG Consulting</h3>
-              <img
+              {/* <img
                 className="hover:scale-105 duration-1000"
                 src="/griffin.png"
                 alt="Griffin EnerG Consulting"
-              />
-              {/* <Image
+              /> */}
+              <Image
                 className="hover:scale-105 duration-1000"
                 src={"/griffin.png"}
                 width={1893}
                 height={863}
                 layout="intrinsic"
                 alt="Griffin EnerG Consulting"
-              /> */}
+              />
             </div>
             <div
               className={`${
