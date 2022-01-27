@@ -9,6 +9,7 @@ import {
   faTimes,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -405,6 +406,23 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div className="w-full border-b-2 border-dark my-2"></div>
+        <footer className="grid grid-cols-3 w-full">
+          {/* logo */}
+          <div className="grid grid-cols-2 w-12 items-center">
+            <FontAwesomeIcon className="" icon={faTerminal} />
+            <p className="whitespace-nowrap">Jason Prince</p>
+          </div>
+          {/* copywrite */}
+          <div className="text-xs whitespace-nowrap">
+            <p className="pt-1">© 2022 Jason Prince All rights reserved.</p>
+          </div>
+          {/* social */}
+          <div className="grid grid-cols-2 text-xl w-14 pb-0.5 place-self-end">
+            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faGithub} />
+          </div>
+        </footer>
       </div>
     </>
   );
