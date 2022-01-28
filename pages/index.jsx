@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import {
   faBars,
+  faChevronUp,
   faCode,
   faEnvelope,
   faMoon,
@@ -20,7 +21,12 @@ import Link from "next/link";
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log("isMenuOpen: ", isMenuOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("");
+  const [isFrontend, setIsFrontend] = useState(false);
+  const [isBackend, setIsBackend] = useState(false);
+  const [isOther, setIsOther] = useState(false);
+  console.log("isOpen: ", isOpen);
 
   useEffect(() => {
     const saved = localStorage.getItem("isDark");
@@ -170,13 +176,22 @@ export default function Home() {
               objectFit="contain"
             />
           </div>
-          <h1 className=" z-10 bg-light border-2 border-dark p-3 w-[351px] text-2xl text-center md:text-left md:translate-x-7 md:-translate-y-10">
+          <h1
+            className={`${
+              isDark
+                ? "bg-dark border-light text-light"
+                : "bg-light border-dark text-dark"
+            } z-10 duration-1000 border-2 p-3 w-[351px] text-2xl text-center md:text-left md:translate-x-7 md:-translate-y-10`}
+          >
             Hi, I&#39;m Jason Prince. <br />A Front-End Developer based in Utah.
             Available for freelance & collaborations.
           </h1>
           {/* projects */}
         </div>
-        <section id="projects" className="text-2xl grid grid-cols-12 gap-4">
+        <section
+          id="projects"
+          className="text-2xl grid grid-cols-12 gap-4 pb-10"
+        >
           <h2 className="col-start-1 ">Projects</h2>
           <div
             className={`${
@@ -246,11 +261,189 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div
-          className={`${
-            isDark ? "border-light" : "border-dark"
-          } w-full border-b-2 my-2 duration-1000`}
-        ></div>
+        <section
+          id="aboutme"
+          className="text-2xl grid grid-cols-12 gap-4 w-full"
+        >
+          <h2
+            className={`${
+              isDark ? "border-light" : "border-dark"
+            } col-start-1 col-span-full pb-3 border-b-2 duration-1000 whitespace-nowrap`}
+          >
+            About Me
+          </h2>
+
+          <div className="col-start-1 col-span-full text-lg">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              aut, fuga fugiat quia exercitationem atque! Cumque officia iusto,
+              in nobis quos incidunt quae pariatur libero debitis expedita,
+              repellat velit blanditiis?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit voluptatum eos nemo animi ducimus adipisci laborum
+              architecto voluptas. Magnam dolorum dolores a unde, magni ea nam
+              dolor recusandae rerum culpa.
+            </p>
+          </div>
+          <div className="col-start-1 col-span-full text-lg grid gap-2">
+            <div
+              onClick={() => setIsFrontend(!isFrontend)}
+              className="flex justify-between cursor-pointer duration-1000"
+            >
+              <h4 className="whitespace-nowrap">FrontEnd</h4>
+              <FontAwesomeIcon
+                className={`${isFrontend ? "rotate-180" : ""} duration-1000`}
+                icon={faChevronUp}
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-b-2  w-full duration-1000`}
+            />
+            <div
+              className={`${
+                isFrontend ? "max-h-[150px] p-4" : "max-h-0"
+              } overflow-hidden duration-1000 `}
+            >
+              <p className="text-base">
+                HTML, CSS, Sass, Styled Components, CSS Modules, JavaScript,
+                Material UI, Bootstrap, TailwindCSS
+              </p>
+            </div>
+
+            <div
+              onClick={() => setIsBackend(!isBackend)}
+              className="flex justify-between cursor-pointer duration-1000"
+            >
+              <h4 className="whitespace-nowrap">BackEnd</h4>
+              <FontAwesomeIcon
+                className={`${isBackend ? "rotate-180" : ""} duration-1000`}
+                icon={faChevronUp}
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-b-2  w-full duration-1000`}
+            />
+            <div
+              className={`${
+                isBackend ? "max-h-[150px] p-4" : "max-h-0"
+              } overflow-hidden duration-1000 `}
+            >
+              <p className="text-base">
+                Python, Django, NodeJS, SQLite3, MySQL, MongoDB
+              </p>
+            </div>
+
+            <div
+              onClick={() => setIsOther(!isOther)}
+              className="flex justify-between cursor-pointer duration-1000"
+            >
+              <h4 className="whitespace-nowrap">Others</h4>
+              <FontAwesomeIcon
+                className={`${isOther ? "rotate-180" : ""} duration-1000`}
+                icon={faChevronUp}
+              />
+            </div>
+            <div
+              className={`${
+                isDark ? "border-light" : "border-dark"
+              } border-b-2  w-full duration-1000`}
+            />
+            <div
+              className={`${
+                isOther ? "max-h-[150px] p-4" : "max-h-0"
+              } overflow-hidden duration-1000 `}
+            >
+              <p className="text-base">
+                VSCode, React, NextJS, Netlify, Heroku, Vercel, Git, GitHub
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* <section id="aboutme" className="text-2xl grid grid-cols-12 gap-4">
+          <h2 className="col-start-1 whitespace-nowrap">About Me</h2>
+
+          <div
+            className={`${
+              isDark ? "border-light" : "border-dark"
+            } w-full border-b-2 my-2 duration-1000`}
+          >
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                aut, fuga fugiat quia exercitationem atque! Cumque officia
+                iusto, in nobis quos incidunt quae pariatur libero debitis
+                expedita, repellat velit blanditiis?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit voluptatum eos nemo animi ducimus adipisci laborum
+                architecto voluptas. Magnam dolorum dolores a unde, magni ea nam
+                dolor recusandae rerum culpa.
+              </p>
+            </div>
+            <div>
+              <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex justify-between cursor-pointer duration-1000"
+              >
+                <h4>Section One</h4>
+                <FontAwesomeIcon
+                  className={`${isOpen ? "rotate-180" : ""} duration-1000`}
+                  icon={faChevronUp}
+                />
+              </div>
+              <div
+                className={`${
+                  isOpen ? "max-h-10" : "max-h-0"
+                } overflow-hidden duration-1000`}
+              >
+                <p>section 1 content</p>
+              </div>
+
+              <div className="cursor-pointer duration-1000">section 2</div>
+              <div className="overflow-hidden hidden">
+                <p>section 2 content</p>
+              </div>
+
+              <div className="cursor-pointer duration-1000">section 3</div>
+              <div className="overflow-hidden hidden">
+                <p>section 3 content</p>
+              </div>
+            </div>
+            <ul className="text-sm flex">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>BEM</li>
+              <li>STYLED COMPONENTS</li>
+              <li>JAVASCRIPT</li>
+              <li>PYTHON</li>
+              <li>REACT</li>
+              <li>NEXTJS</li>
+              <li>KNEXJS</li>
+              <li>GIT</li>
+              <li>GITHUB</li>
+              <li>BOOTSTRAP</li>
+              <li>TAILWINDCSS</li>
+              <li>EXPRESS</li>
+              <li>DJANGO</li>
+              <li>NODEJS</li>
+              <li>SQLITE3</li>
+              <li>MYSQL</li>
+              <li>NETLIFY</li>
+              <li>HEROKU</li>
+              <li>VERCEL</li>
+              <li>FIGMA</li>
+            </ul>
+          </div>
+        </section> */}
+
         <footer className="grid grid-cols-3 w-full">
           {/* logo */}
           <div className="grid grid-cols-2 w-12 items-center">
