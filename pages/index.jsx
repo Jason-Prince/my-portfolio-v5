@@ -273,95 +273,103 @@ export default function Home() {
             About Me
           </h2>
 
-          <div className="col-start-1 col-span-full text-lg">
+          <div className="col-start-1 col-span-full md:col-span-6 text-lg">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               aut, fuga fugiat quia exercitationem atque! Cumque officia iusto,
               in nobis quos incidunt quae pariatur libero debitis expedita,
               repellat velit blanditiis?
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit voluptatum eos nemo animi ducimus adipisci laborum
-              architecto voluptas. Magnam dolorum dolores a unde, magni ea nam
-              dolor recusandae rerum culpa.
-            </p>
           </div>
-          <div className="col-start-1 col-span-full text-lg grid gap-2">
-            <div
-              onClick={() => setIsFrontend(!isFrontend)}
-              className="flex justify-between cursor-pointer duration-1000"
-            >
-              <h4 className="whitespace-nowrap">FrontEnd</h4>
-              <FontAwesomeIcon
-                className={`${isFrontend ? "rotate-180" : ""} duration-1000`}
-                icon={faChevronUp}
-              />
-            </div>
-            <div
-              className={`${
-                isDark ? "border-light" : "border-dark"
-              } border-b-2  w-full duration-1000`}
-            />
-            <div
-              className={`${
-                isFrontend ? "max-h-[150px] p-4" : "max-h-0"
-              } overflow-hidden duration-1000 `}
-            >
-              <p className="text-base">
-                HTML, CSS, Sass, Styled Components, CSS Modules, JavaScript,
-                Material UI, Bootstrap, TailwindCSS
-              </p>
-            </div>
-
-            <div
-              onClick={() => setIsBackend(!isBackend)}
-              className="flex justify-between cursor-pointer duration-1000"
-            >
-              <h4 className="whitespace-nowrap">BackEnd</h4>
-              <FontAwesomeIcon
-                className={`${isBackend ? "rotate-180" : ""} duration-1000`}
-                icon={faChevronUp}
-              />
-            </div>
-            <div
-              className={`${
-                isDark ? "border-light" : "border-dark"
-              } border-b-2  w-full duration-1000`}
-            />
-            <div
-              className={`${
-                isBackend ? "max-h-[150px] p-4" : "max-h-0"
-              } overflow-hidden duration-1000 `}
-            >
-              <p className="text-base">
-                Python, Django, NodeJS, SQLite3, MySQL, MongoDB
-              </p>
+          <div className="col-start-1 col-span-full md:col-start-7 md:col-span-7 text-lg grid gap-2">
+            <div className="flex flex-col">
+              <div className="flex flex-col">
+                <div
+                  onClick={() => setIsFrontend(!isFrontend)}
+                  className="flex justify-between cursor-pointer duration-1000"
+                >
+                  <h4 className="whitespace-nowrap">FrontEnd</h4>
+                  <FontAwesomeIcon
+                    className={`${
+                      isFrontend ? "rotate-180" : ""
+                    } duration-1000`}
+                    icon={faChevronUp}
+                  />
+                </div>
+                <div
+                  className={`${
+                    isDark ? "border-light" : "border-dark"
+                  } border-b-2  w-full duration-1000`}
+                />
+              </div>
+              <div
+                className={`${
+                  isFrontend ? "max-h-[150px] p-4" : "max-h-0"
+                } overflow-hidden duration-1000 `}
+              >
+                <p className="text-base">
+                  HTML, CSS, Sass, Styled Components, CSS Modules, JavaScript,
+                  Material UI, Bootstrap, TailwindCSS
+                </p>
+              </div>
             </div>
 
-            <div
-              onClick={() => setIsOther(!isOther)}
-              className="flex justify-between cursor-pointer duration-1000"
-            >
-              <h4 className="whitespace-nowrap">Others</h4>
-              <FontAwesomeIcon
-                className={`${isOther ? "rotate-180" : ""} duration-1000`}
-                icon={faChevronUp}
-              />
+            <div className="flex flex-col">
+              <div className="flex flex-col">
+                <div
+                  onClick={() => setIsBackend(!isBackend)}
+                  className="flex justify-between cursor-pointer duration-1000"
+                >
+                  <h4 className="whitespace-nowrap">BackEnd</h4>
+                  <FontAwesomeIcon
+                    className={`${isBackend ? "rotate-180" : ""} duration-1000`}
+                    icon={faChevronUp}
+                  />
+                </div>
+                <div
+                  className={`${
+                    isDark ? "border-light" : "border-dark"
+                  } border-b-2  w-full duration-1000`}
+                />
+              </div>
+              <div
+                className={`${
+                  isBackend ? "max-h-[150px] p-4" : "max-h-0"
+                } overflow-hidden duration-1000 `}
+              >
+                <p className="text-base">
+                  Python, Django, NodeJS, SQLite3, MySQL, MongoDB
+                </p>
+              </div>
             </div>
-            <div
-              className={`${
-                isDark ? "border-light" : "border-dark"
-              } border-b-2  w-full duration-1000`}
-            />
-            <div
-              className={`${
-                isOther ? "max-h-[150px] p-4" : "max-h-0"
-              } overflow-hidden duration-1000 `}
-            >
-              <p className="text-base">
-                VSCode, React, NextJS, Netlify, Heroku, Vercel, Git, GitHub
-              </p>
+
+            <div className="flex flex-col">
+              <div className="flex flex-col">
+                <div
+                  onClick={() => setIsOther(!isOther)}
+                  className="flex justify-between cursor-pointer duration-1000"
+                >
+                  <h4 className="whitespace-nowrap">Others</h4>
+                  <FontAwesomeIcon
+                    className={`${isOther ? "rotate-180" : ""} duration-1000`}
+                    icon={faChevronUp}
+                  />
+                </div>
+                <div
+                  className={`${
+                    isDark ? "border-light" : "border-dark"
+                  } border-b-2  w-full duration-1000`}
+                />
+              </div>
+              <div
+                className={`${
+                  isOther ? "max-h-[150px] p-4" : "max-h-0"
+                } overflow-hidden duration-1000 `}
+              >
+                <p className="text-base">
+                  VSCode, React, NextJS, Netlify, Heroku, Vercel, Git, GitHub
+                </p>
+              </div>
             </div>
           </div>
         </section>
