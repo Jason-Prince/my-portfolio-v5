@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -35,52 +36,92 @@ export default function Home() {
       <div
         className={`${
           isDark ? "bg-dark text-light" : "bg-light text-dark"
-        } font-Poppins h-min duration-1000 grid place-items-center px-4 `}
+        } font-Poppins h-min duration-1000 grid place-items-center px-4`}
       >
         <div
           className={`${
             isDark ? "bg-dark" : "bg-light"
-          } grid grid-cols-12 pt-5 px-5 z-50 sticky top-0 duration-1000`}
+          } flex justify-between w-full pt-5 px-5 z-50 sticky top-0 duration-1000`}
         >
           {/* logo */}
-          <div className="col-start-1 w-[100px] text-lg grid grid-cols-12 items-center">
+          <div className="w-[100px] text-lg grid grid-cols-12 items-center">
             <FontAwesomeIcon className="" icon={faTerminal} />
             <p className="col-start-4 whitespace-nowrap">Jason Prince</p>
           </div>
-          {/* theme toggle */}
-          <div className="col-end-9 flex w-[90px] justify-around items-center">
-            <FontAwesomeIcon icon={faSun} />
-            <div
-              onClick={() => setIsDark(!isDark)}
-              className="w-[42px] h-4 bg-slate-400 rounded-lg cursor-pointer"
+          <div className="flex w-[150px] md:w-[517px] justify-between">
+            {/* nav links */}
+            <ul
+              className={`hidden col-start-5 col-end-13 row-start-1 gap-8 w-[325px] md:flex place-items-center duration-1000`}
             >
-              <div
+              <li
                 className={`${
-                  isDark ? "translate-x-[26px] " : ""
-                } duration-1000  h-4 w-4 text-center rounded-full text-3xl bg-slate-600`}
-              ></div>
+                  isDark ? "hover:bg-black" : "hover:bg-slate-300"
+                } flex w-[105px] pt-1 px-2 place-content-center justify-between rounded whitespace-nowrap cursor-pointer`}
+              >
+                <FontAwesomeIcon
+                  className="place-self-end mb-1.5"
+                  icon={faUser}
+                />
+                <p className="place-self-start pl-2">About Me</p>
+              </li>
+              <li
+                className={`${
+                  isDark ? "hover:bg-black" : "hover:bg-slate-300"
+                } flex w-[100px] pt-1 px-2 place-content-center justify-between rounded whitespace-nowrap cursor-pointer`}
+              >
+                <FontAwesomeIcon
+                  className="place-self-end mb-1.5"
+                  icon={faCode}
+                />
+                <p className="place-self-start pl-2">Projects</p>
+              </li>
+              <li
+                className={`${
+                  isDark ? "hover:bg-black" : "hover:bg-slate-300"
+                } flex w-[120px] pt-1 px-2 place-content-center justify-between rounded whitespace-nowrap cursor-pointer`}
+              >
+                <FontAwesomeIcon
+                  className="place-self-end mb-1.5"
+                  icon={faEnvelope}
+                />
+                <p className="place-self-start pl-2">Contact Me</p>
+              </li>
+            </ul>
+            {/* theme toggle */}
+            <div className="col-end-11 row-start-1 md:col-end-13 flex w-[90px] justify-around items-center">
+              <FontAwesomeIcon icon={faSun} />
+              <div
+                onClick={() => setIsDark(!isDark)}
+                className="w-[42px] h-4 bg-slate-400 rounded-lg cursor-pointer"
+              >
+                <div
+                  className={`${
+                    isDark ? "translate-x-[26px] " : ""
+                  } duration-1000  h-4 w-4 text-center rounded-full text-3xl bg-slate-600`}
+                ></div>
+              </div>
+              <FontAwesomeIcon icon={faMoon} />
             </div>
-            <FontAwesomeIcon icon={faMoon} />
-          </div>
-          {/* menu toggle */}
-          <div
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`${
-              isDark ? "hover:bg-black" : "hover:bg-slate-300"
-            } rounded-full col-end-13 col-span-2 justify-self-end text-xl cursor-pointer grid grid-cols-1`}
-          >
-            <div className={` h-10 w-10  col-start-1 row-start-1`} />
-            {isMenuOpen ? (
-              <FontAwesomeIcon
-                className="col-start-1 row-start-1 place-self-center"
-                icon={faTimes}
-              />
-            ) : (
-              <FontAwesomeIcon
-                className="col-start-1 row-start-1 place-self-center"
-                icon={faBars}
-              />
-            )}
+            {/* menu toggle */}
+            <div
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`${
+                isDark ? "hover:bg-black" : "hover:bg-slate-300"
+              } rounded-full col-end-13 col-span-2 justify-self-end text-xl cursor-pointer grid grid-cols-1 md:hidden`}
+            >
+              <div className={` h-10 w-10  col-start-1 row-start-1`} />
+              {isMenuOpen ? (
+                <FontAwesomeIcon
+                  className="col-start-1 row-start-1 place-self-center"
+                  icon={faTimes}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  className="col-start-1 row-start-1 place-self-center"
+                  icon={faBars}
+                />
+              )}
+            </div>
           </div>
         </div>
         <ul
@@ -91,7 +132,7 @@ export default function Home() {
           <li
             className={`${
               isDark ? "hover:bg-black" : "hover:bg-slate-300"
-            } grid grid-cols-2 p-4 gap-4 w-screen justify-items-center cursor-pointer`}
+            } grid grid-cols-2 p-4 gap-4 w-full justify-items-center cursor-pointer`}
           >
             <FontAwesomeIcon className="place-self-end mb-1.5" icon={faUser} />
             <p className="place-self-start">About Me</p>
@@ -99,7 +140,7 @@ export default function Home() {
           <li
             className={`${
               isDark ? "hover:bg-black" : "hover:bg-slate-300"
-            } grid grid-cols-2 place-items-center p-4 gap-4 w-screen cursor-pointer`}
+            } grid grid-cols-2 place-items-center p-4 gap-4 w-full cursor-pointer`}
           >
             <FontAwesomeIcon className="place-self-end mb-1.5" icon={faCode} />
             <p className="place-self-start">Projects</p>
@@ -107,7 +148,7 @@ export default function Home() {
           <li
             className={`${
               isDark ? "hover:bg-black" : "hover:bg-slate-300"
-            } grid grid-cols-2 place-items-center p-4 gap-4 w-screen cursor-pointer`}
+            } grid grid-cols-2 place-items-center p-4 gap-4 w-full cursor-pointer`}
           >
             <FontAwesomeIcon
               className="place-self-end mb-1.5"
