@@ -263,7 +263,7 @@ export default function Home() {
         </section>
         <section
           id="aboutme"
-          className="text-2xl grid grid-cols-12 gap-4 w-full"
+          className="text-2xl grid grid-cols-12 gap-4 w-full pb-10"
         >
           <h2
             className={`${
@@ -281,7 +281,7 @@ export default function Home() {
               repellat velit blanditiis?
             </p>
           </div>
-          <div className="col-start-1 col-span-full md:col-start-7 md:col-span-7 text-lg grid gap-2">
+          <div className="col-start-1 col-span-full md:col-start-7  text-lg grid gap-2">
             <div className="flex flex-col">
               <div className="flex flex-col">
                 <div
@@ -373,84 +373,78 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <section id="aboutme" className="text-2xl grid grid-cols-12 gap-4">
-          <h2 className="col-start-1 whitespace-nowrap">About Me</h2>
-
-          <div
+        <section
+          id="contact"
+          className="text-2xl grid grid-cols-12 gap-4 w-full pb-10 "
+        >
+          <h2
             className={`${
               isDark ? "border-light" : "border-dark"
-            } w-full border-b-2 my-2 duration-1000`}
+            } col-start-1 col-span-full pb-3 border-b-2 duration-1000 whitespace-nowrap duration-1000`}
           >
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                aut, fuga fugiat quia exercitationem atque! Cumque officia
-                iusto, in nobis quos incidunt quae pariatur libero debitis
-                expedita, repellat velit blanditiis?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit voluptatum eos nemo animi ducimus adipisci laborum
-                architecto voluptas. Magnam dolorum dolores a unde, magni ea nam
-                dolor recusandae rerum culpa.
-              </p>
-            </div>
-            <div>
-              <div
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex justify-between cursor-pointer duration-1000"
-              >
-                <h4>Section One</h4>
-                <FontAwesomeIcon
-                  className={`${isOpen ? "rotate-180" : ""} duration-1000`}
-                  icon={faChevronUp}
+            Say Hello
+          </h2>
+          <div className="col-start-1 col-span-full md:col-span-6 text-lg">
+            <p>
+              Looking to start a new project or just want to say hi? Send me an
+              email and I&#39;ll do my best to reply within 24 hours!
+            </p>
+            <br />
+            <p>
+              If contact forms aren&#39;t your thing... send me an email at
+              jasoncprince@gmail.com
+            </p>
+          </div>
+          <div className="col-start-1 md:col-start-7 col-span-full text-lg">
+            <form className="grid gap-2" action="">
+              <div className="flex flex-col">
+                <label htmlFor="name">Name</label>
+                <input
+                  className={`${
+                    isDark ? "border-light bg-dark" : "border-dark bg-light"
+                  } border-2  p-1 pl-2 rounded duration-1000`}
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
                 />
               </div>
-              <div
+              <div className="flex flex-col">
+                <label htmlFor="email">Email</label>
+                <input
+                  className={`${
+                    isDark ? "border-light bg-dark" : "border-dark bg-light"
+                  } border-2  p-1 pl-2 rounded duration-1000`}
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="johndoe@email.com"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  className={`${
+                    isDark ? "border-light bg-dark" : "border-dark bg-light"
+                  } border-2  p-1 pl-2 rounded h-40 duration-1000`}
+                  type="text"
+                  id="message"
+                  name="message"
+                  placeholder="Hello..."
+                />
+              </div>
+              <input
                 className={`${
-                  isOpen ? "max-h-10" : "max-h-0"
-                } overflow-hidden duration-1000`}
-              >
-                <p>section 1 content</p>
-              </div>
-
-              <div className="cursor-pointer duration-1000">section 2</div>
-              <div className="overflow-hidden hidden">
-                <p>section 2 content</p>
-              </div>
-
-              <div className="cursor-pointer duration-1000">section 3</div>
-              <div className="overflow-hidden hidden">
-                <p>section 3 content</p>
-              </div>
-            </div>
-            <ul className="text-sm flex">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>BEM</li>
-              <li>STYLED COMPONENTS</li>
-              <li>JAVASCRIPT</li>
-              <li>PYTHON</li>
-              <li>REACT</li>
-              <li>NEXTJS</li>
-              <li>KNEXJS</li>
-              <li>GIT</li>
-              <li>GITHUB</li>
-              <li>BOOTSTRAP</li>
-              <li>TAILWINDCSS</li>
-              <li>EXPRESS</li>
-              <li>DJANGO</li>
-              <li>NODEJS</li>
-              <li>SQLITE3</li>
-              <li>MYSQL</li>
-              <li>NETLIFY</li>
-              <li>HEROKU</li>
-              <li>VERCEL</li>
-              <li>FIGMA</li>
-            </ul>
+                  isDark
+                    ? "border-light bg-dark hover:bg-black"
+                    : "border-dark bg-light hover:bg-slate-300"
+                } border-2  p-1 pl-2 rounded cursor-pointer duration-1000`}
+                type="submit"
+                value="Send"
+              />
+            </form>
           </div>
-        </section> */}
+        </section>
 
         <footer className="grid grid-cols-3 w-full">
           {/* logo */}
