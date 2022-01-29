@@ -168,6 +168,7 @@ export default function Home() {
         >
           <div className="w-[351px]">
             <Image
+              className="rounded"
               src={"/me.jpg"}
               width={700}
               height={700}
@@ -181,7 +182,7 @@ export default function Home() {
               isDark
                 ? "bg-dark border-light text-light"
                 : "bg-light border-dark text-dark"
-            } z-10 duration-1000 border-2 p-3 w-[351px] text-2xl text-center md:text-left md:translate-x-7 md:-translate-y-10`}
+            } rounded z-10 duration-1000 border-2 p-3 w-[351px] text-2xl text-center md:text-left md:translate-x-7 md:-translate-y-10`}
           >
             Hi, I&#39;m Jason Prince. <br />A Front-End Developer based in Utah.
             Available for freelance & collaborations.
@@ -284,6 +285,7 @@ export default function Home() {
           <div className="col-start-1 col-span-full md:col-start-7  text-lg grid gap-2">
             <div className="flex flex-col">
               <div className="flex flex-col">
+                <h3 className="text-xl pb-2">What I&#39;ve worked with:</h3>
                 <div
                   onClick={() => setIsFrontend(!isFrontend)}
                   className="flex justify-between cursor-pointer duration-1000"
