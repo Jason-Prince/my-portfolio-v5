@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="grid grid-cols-12 gap-4 pb-10 text-2xl font-Poppins bg-gray-100 dark:bg-black "
+      className="grid grid-cols-12 gap-4 pb-10 text-2xl bg-gray-100 font-Poppins dark:bg-black "
     >
       <h2 className="col-start-1 text-cyan-800 dark:text-gray-400">Projects</h2>
       <div className="col-span-12 col-start-1 duration-1000 border-b-2 border-cyan-800 dark:border-gray-400" />
@@ -40,11 +40,10 @@ const Projects = () => {
         {projects.map(({ name, src, width, height }, index) => (
           <div
             key={index}
-            className="p-2 text-cyan-800 duration-1000 border-2 border-cyan-800 rounded cursor-pointer dark:text-gray-400 dark:border-gray-400"
+            className="p-2 duration-500 border-2 rounded cursor-pointer shadow-cardDown hover:shadow-cardUp dark:shadow-white text-cyan-800 border-cyan-800 dark:text-gray-400 dark:border-gray-400"
           >
             <h3>{name}</h3>
             <Image
-              className="hover:scale-105"
               src={src}
               width={width}
               height={height}
