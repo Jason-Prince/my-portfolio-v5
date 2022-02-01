@@ -16,17 +16,17 @@ import Link from "next/link";
 const navLinks = [
   {
     name: "About Me",
-    href: "#aboutme",
+    href: "/#aboutme",
     icon: faUser,
   },
   {
     name: "Projects",
-    href: "#projects",
+    href: "/#projects",
     icon: faCode,
   },
   {
     name: "Contact",
-    href: "#contact",
+    href: "/#contact",
     icon: faEnvelope,
   },
 ];

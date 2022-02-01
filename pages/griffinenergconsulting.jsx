@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Image from "next/image";
 
-const Project = () => {
+const GriffinEnergConsulting = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,7 +24,6 @@ const Project = () => {
   const handleIsMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  console.log("isDark: ", isDark);
   return (
     <div
       className={`${isDark ? "dark bg-black" : "bg-gray-100"} relative px-4`}
@@ -49,7 +48,7 @@ const Project = () => {
         </div>
         <div className="grid grid-cols-12 col-start-1 gap-3 col-span-full">
           <h2 className="col-start-1 text-4xl font-Poppins text-cyan-800 col-span-full md:col-span-6 md:text-center">
-            Title of Project
+            Griffin EnerG Consulting
           </h2>
           <p className="col-start-1 text-xl text-cyan-800 font-Poppins col-span-full md:col-start-7">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
@@ -93,4 +92,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default GriffinEnergConsulting;
