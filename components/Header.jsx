@@ -33,7 +33,7 @@ const navLinks = [
 
 const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
   return (
-    <div className="grid pt-4 pb-2 bg-gray-100 text-cyan-800 dark:text-gray-400 font-Poppins dark:bg-black">
+    <div className="grid pt-4 pb-4 bg-gray-100 text-cyan-800 dark:text-gray-400 font-Poppins dark:bg-black">
       <div className="relative grid grid-cols-12 dark:bg-black">
         {/* logo */}
         <Link href="/" passHref>
@@ -45,8 +45,8 @@ const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
         {/* nav links */}
         <ul
           className={`${
-            isMenuOpen ? "right-0" : ""
-          } absolute grid grid-flow-row col-span-3 md:col-start-8 row-start-1 -right-40 top-10 md:top-0 md:right-0 gap-4 md:col-end-13 md:grid-flow-col duration-1000 ease-in-out dark:bg-black rounded-bl-xl`}
+            isMenuOpen ? "right-0 " : "-right-64"
+          } absolute pb-4 px-4 grid duration-1000 grid-flow-row col-span-3 md:col-start-8 row-start-1 top-10 md:top-0 md:right-0 gap-4 md:col-end-13 md:grid-flow-col bg-gray-100 dark:bg-black rounded-bl-xl`}
         >
           {navLinks.map(({ name, icon, href }, index) => (
             <Link key={index} href={href} passHref>
@@ -70,11 +70,14 @@ const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
           onClick={() => handleIsMenuOpen()}
           className="grid grid-cols-1 col-span-2 col-end-13 row-start-1 text-xl rounded-full cursor-pointer justify-self-end md:hidden"
         >
-          <div className="w-10 h-10 col-start-1 row-start-1" />
-          <FontAwesomeIcon
-            className="col-start-1 row-start-1 place-self-center"
-            icon={isMenuOpen ? faTimes : faBars}
-          />
+          <div className="col-start-1 row-start-1" />
+          <div className="grid">
+            <div className="z-10 col-start-1 row-start-1 p-4 border-2 border-gray-100 rounded-full hover:border-cyan-800 dark:border-black dark:hover:border-gray-100" />
+            <FontAwesomeIcon
+              className="col-start-1 row-start-1 text-2xl duration-300 place-self-center"
+              icon={isMenuOpen ? faTimes : faBars}
+            />
+          </div>
         </div>
       </div>
     </div>
