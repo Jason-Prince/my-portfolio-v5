@@ -1,0 +1,26 @@
+import Image from "next/image";
+import React from "react";
+
+const Hero = () => {
+  return (
+    <section className="flex flex-col items-center justify-center bg-zinc-100 dark:bg-zinc-900 text-zinc-800 md:flex-row-reverse md:mt-10 ">
+      <div className="w-[351px]">
+        <Image
+          className="rounded-full"
+          src={"/me.jpg"}
+          width={700}
+          height={700}
+          layout="intrinsic"
+          alt="Jason Prince"
+          objectFit="contain"
+        />
+      </div>
+      <h1 className="dark rounded z-10 border-2 p-3 w-[351px] text-2xl text-center md:text-left md:translate-x-7 md:-translate-y-10 border-zinc-900 dark:border-zinc-100  bg-zinc-100 dark:bg-zinc-900  text-zinc-900 dark:text-zinc-100  ">
+        Hi, I&#39;m Jason Prince. <br />A Front-End Developer based in Utah.
+        Available for freelance & collaborations.
+      </h1>
+    </section>
+  );
+};
+
+export default Hero;

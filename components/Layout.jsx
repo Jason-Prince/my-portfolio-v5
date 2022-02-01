@@ -1,7 +1,7 @@
 import React from "react";
 
-const AboutMe = () => {
+const Layout = () => {
   return <div></div>;
 };
 
-export default AboutMe;
+export default Layout;
