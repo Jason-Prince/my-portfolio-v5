@@ -32,15 +32,15 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="grid grid-cols-12 gap-4 pb-10 text-2xl font-Poppins bg-zinc-100 dark:bg-zinc-900 "
+      className="grid grid-cols-12 gap-4 pb-10 text-2xl font-Poppins bg-gray-100 dark:bg-black "
     >
-      <h2 className="col-start-1 text-zinc-900 dark:text-zinc-100">Projects</h2>
-      <div className="col-span-12 col-start-1 duration-1000 border-b-2 dark:border-zinc-100 border-zinc-900" />
+      <h2 className="col-start-1 text-cyan-800 dark:text-gray-400">Projects</h2>
+      <div className="col-span-12 col-start-1 duration-1000 border-b-2 border-cyan-800 dark:border-gray-400" />
       <div className="grid w-full grid-cols-1 gap-4 col-span-full md:grid-cols-2 xl:grid-cols-4">
         {projects.map(({ name, src, width, height }, index) => (
           <div
             key={index}
-            className="p-2 duration-1000 border-2 rounded cursor-pointer text-zinc-900 dark:text-zinc-100 dark:border-zinc-100 border-zinc-900"
+            className="p-2 text-cyan-800 duration-1000 border-2 border-cyan-800 rounded cursor-pointer dark:text-gray-400 dark:border-gray-400"
           >
             <h3>{name}</h3>
             <Image

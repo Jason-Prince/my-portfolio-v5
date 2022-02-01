@@ -33,11 +33,11 @@ const navLinks = [
 
 const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
   return (
-    <div className="grid pt-4 pb-2 text-zinc-900 dark:text-zinc-100 font-Poppins bg-zinc-100 dark:bg-zinc-900">
-      <div className="relative grid grid-cols-12 dark:bg-zinc-900">
+    <div className="grid pt-4 pb-2 bg-gray-100 text-cyan-800 dark:text-gray-400 font-Poppins dark:bg-black">
+      <div className="relative grid grid-cols-12 dark:bg-black">
         {/* logo */}
         <Link href="/" passHref>
-          <div className="w-[100px] cursor-pointer text-2xl col-start-1 row-start-1 grid grid-flow-col items-center dark:bg-zinc-900 ">
+          <div className="w-[100px] cursor-pointer text-2xl col-start-1 row-start-1 grid grid-flow-col items-center dark:bg-black ">
             <FontAwesomeIcon className="" icon={faTerminal} />
             <p className="col-start-4 whitespace-nowrap">Jason Prince</p>
           </div>
@@ -46,11 +46,11 @@ const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
         <ul
           className={`${
             isMenuOpen ? "right-0" : ""
-          } absolute grid grid-flow-row col-span-3 md:col-start-8 row-start-1 -right-40 top-10 md:top-0 md:right-0 gap-4 md:col-end-13 md:grid-flow-col duration-1000 ease-in-out dark:bg-zinc-900 rounded-bl-xl`}
+          } absolute grid grid-flow-row col-span-3 md:col-start-8 row-start-1 -right-40 top-10 md:top-0 md:right-0 gap-4 md:col-end-13 md:grid-flow-col duration-1000 ease-in-out dark:bg-black rounded-bl-xl`}
         >
           {navLinks.map(({ name, icon, href }, index) => (
             <Link key={index} href={href} passHref>
-              <li className="grid content-center grid-flow-col gap-2 px-2 text-xl duration-500 border-2 rounded-full cursor-pointer hover:border-zinc-900 border-zinc-100 dark:border-zinc-900 dark:hover:border-zinc-100">
+              <li className="grid content-center grid-flow-col gap-2 px-2 text-xl duration-500 border-2 border-gray-100 rounded-full cursor-pointer hover:border-cyan-800 dark:border-black dark:hover:border-gray-400">
                 <FontAwesomeIcon className="place-self-center" icon={icon} />
                 <p className="text-left whitespace-nowrap">{name}</p>
               </li>
@@ -58,7 +58,7 @@ const Header = ({ handleIsDark, handleIsMenuOpen, isMenuOpen, isDark }) => {
           ))}
           <li
             onClick={() => handleIsDark()}
-            className="grid content-center grid-flow-col px-2 text-xl duration-500 border-2 rounded-full cursor-pointer hover:border-zinc-900 border-zinc-100 dark:border-zinc-900 dark:hover:border-zinc-100"
+            className="grid content-center grid-flow-col px-2 text-xl duration-500 border-2 border-gray-100 rounded-full cursor-pointer hover:border-cyan-800 dark:border-black dark:hover:border-gray-400"
           >
             <FontAwesomeIcon className="place-self-center" icon={faLightbulb} />
             <p className="px-2 text-left">{isDark ? "Light" : "Dark"}</p>

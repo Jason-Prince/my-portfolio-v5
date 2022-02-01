@@ -31,7 +31,7 @@ export default function Home() {
   console.log("is  ", isDark);
   return (
     <div
-      className={`${isDark ? "dark bg-zinc-900" : "bg-zinc-100"} relative px-4`}
+      className={`${isDark ? "dark bg-black" : "bg-gray-100"} relative px-4`}
     >
       <div className="sticky top-0 z-50">
         <Header
